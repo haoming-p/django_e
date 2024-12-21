@@ -41,12 +41,6 @@ class Customer(models.Model):
     birth_date = models.DateField(null=True)        # nullable
     membership = models.CharField(max_length=1, choices=MEMBERSHIP_CHOICES, default=MEMBERSHIP_Bronze)  # 从list中选择，设置默认
 
-    class Meta: # customize database schema
-        db_table= 'store_customers'
-        indexes = [
-            models.Index(fields=['last_name','first_name'])
-        ]
-
 
 class Order(models.Model):
     PAYMENT_STATUS_PENDING = 'P'

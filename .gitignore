@@ -123,7 +123,10 @@ git init
 git remote add origin https://github.com/haoming-p/django_e
 添加gitignore
 git add .
-
+通过git status查看状态
+git commit -m "initial: add django project files"
+git push -u origin main
+git log --oneline   看到上一次的commit
 
 command + b, 展开/收缩左边栏
 
